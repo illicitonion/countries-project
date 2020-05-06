@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300px;
+    color: hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+#title {
+    background: white;
+    position: absolute;
+    top: 0px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-left: 40px;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+#header {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#content {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+#search-box {
+    padding: 15px;
+}
+
+#region-selector {
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 40px;
+    padding-left: 20px;
+    background: white;
+    border: none;
+}
+
+ul.countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    clear: both;
+}
+
+.countries-list li.country {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 280px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 75px;
+}
+
+.countries-list .flag-container {
+    max-height: 200px;
+    overflow: hidden;
+    line-height: 200px;
+}
+
+.countries-list img.flag {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.countries-list li h2 {
+    font-weight: 800;
+}
+
+a {
+    cursor: pointer;
+}
+
+.info-box {
+    line-height: 1.8;
+}
+
+.label {
+    font-weight: 600;
+}
+
+button {
+    background: white;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.country-nav {
+    margin-bottom: 80px;
+}
+
+.country-nav button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.country-container {
+    max-width: 1300px;
+}
+
+.country-container .flag-container {
+    float: left;
+    margin-right: 120px;
+    height: 400px;
+}
+
+.country-container .flag {
+    width: 500px;
+    max-height: 400px;
+}
+
+.country-container .text-container {
+    min-width: 500px;
+    display: inline-block;
+}
+
+.country-container .info-box {
+    height: 150px;
+    display: grid;
+    grid-template: "a"
+                   "a"
+                   "a"
+                   "a"
+                   "a";
+    grid-auto-flow: column;
+}
+
+/* TODO: Fix the 1080 so it's actually when the infbox wraps */
+@media only screen and (max-width: 1254px) {
+    .country-container .info-box {
+        grid-auto-flow: unset;
+    }
+
+    .border-country-buttons {
+        display: grid !important;
+        margin-top: 10px;
+    }
+}
+
+.country-container .label {
+    margin-right: 20px;
+    white-space: nowrap;
+
+}
+
+.country-container .info-box > div {
+    min-width: 300px;
+}
+
+.border-countries {
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.border-country-buttons {
+    display: inline-grid;
+    grid-template: "a a a";
+    column-gap: 10px;
+    row-gap: 5px;
+    width: 400px;
+}
+
+.border-country-buttons button {
+    width: 130px;
+}
